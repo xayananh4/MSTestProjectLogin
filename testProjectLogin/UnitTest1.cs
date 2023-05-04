@@ -1,5 +1,8 @@
-﻿using OpenQA.Selenium;
+﻿using System.Drawing;
+using System.Runtime.Intrinsics.X86;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Interactions;
 
 namespace testProjectLogin;
 
@@ -11,112 +14,61 @@ public class UnitTest1
     [TestMethod]
     public void test1()
     {
-        Console.WriteLine("TestExcution Start");
+        Console.WriteLine("TestExcution Has Started");
         driver.Navigate().GoToUrl("https://www.tutorialspoint.com/selenium/selenium_automation_practice.htm");
         Console.WriteLine("Url is opened");
+        driver.Manage().Window.Size = new Size(1920,1080);
         String txt_title = driver.Title.ToString();
         bool titleIsEqual = txt_title.Equals("Selenium - Automation Practice Form");
         Assert.IsTrue(titleIsEqual);
-        Console.WriteLine("Test has finished. Website is Up.");
+        Console.WriteLine("Test has completed. Website is up.");
     }
 
-    //public void test1()
-    //{
-    //    Console.WriteLine("testExcution Start");
-    //    driver.Navigate().GoToUrl("https://demosite.executeautomation.com");
-    //    Console.WriteLine("url is opened");
-    //    String txt_title = driver.Title.ToString();
-    //    bool titleIsEqual = txt_title.Equals("Execute Automation");
-    //    Assert.IsTrue(titleIsEqual);
-    //    Console.WriteLine("test has finished.  Website is up.");
-    //}
+    [TestMethod]
+    public void test2()
+    {
+        Console.WriteLine("Login test started");
 
-    //[TestMethod]
-    //public void test2()
-    //{
-    //    Console.WriteLine("login test started");
-    //    By userName = By.CssSelector("#userName > p:nth-child(1) > input[type=text]");
-    //    By passWord = By.CssSelector("#userName > p:nth-child(2) > input[type=text]");
+        //var username = driver.FindElement(userName);
+        var firstName = sendKeys("#mainContent > div:nth-child(7) > div > form > table > tbody > tr:nth-child(1) > td:nth-child(2) > input[type=text]",
+            "viradeth");
+        var lastname = sendKeys("#mainContent > div:nth-child(7) > div > form > table > tbody > tr:nth-child(2) > td:nth-child(2) > input[type=text]",
+            "xayananh");
 
 
-    //    var username = driver.FindElement(userName);
+
+ 
+
+        //select a gender
+        clickElement("#mainContent > div:nth-child(7) > div > form > table > tbody > tr:nth-child(3) > td:nth-child(2) > input[type=radio]:nth-child(1)");
+
+        //select year of experiencee
+        clickElement("#mainContent > div:nth-child(7) > div > form > table > tbody > tr:nth-child(4) > td:nth-child(2) > span:nth-child(1) > input[type=radio]");
+
+        //enter in data in Date textbox
+        sendKeys("#mainContent > div:nth-child(7) > div > form > table > tbody > tr:nth-child(5) > td:nth-child(2) > input[type=text]", "helloworld");
+
+        //select profession
+        clickElement("#mainContent > div:nth-child(7) > div > form > table > tbody > tr:nth-child(6) > td:nth-child(2) > span:nth-child(1) > input[type=checkbox]");
+
+        //send keys to Choose File option
+        string desktopPath = "/Users/viradethxay-ananh/Desktop/screenshot.png";
+        driver.FindElement(By.Name("photo")).SendKeys(desktopPath);
+
+        //create an instance of action class and pass in the driver
+        Actions actions = new Actions(driver);
+
+        //scroll down thee page using the action class
+
+        actions.SendKeys(Keys.PageDown).Perform();
+        ////clicking on the submit button 
+        clickElement("#mainContent > div:nth-child(7) > div > form > table > tbody > tr:nth-child(11) > td:nth-child(2) > button");
 
 
-    //    if (username != null)
-    //    {
-    //        Console.WriteLine("the field username exist");
-    //        username.SendKeys("helloworld");
-    //        Console.WriteLine("keys sent - username: helloworld");
-    //    }
-    //    else
-    //    {
-    //        Console.WriteLine("login element not found");
 
-    //    }
-    //    var password = driver.FindElement(passWord);
-    //    if (password != null)
-    //    {
-    //        Console.WriteLine("the field passwors exist");
-    //        password.SendKeys("helloworld");
-    //        Console.WriteLine("keys sent - password: helloworld");
-    //    }
-    //    else
-    //    {
-    //        Console.WriteLine("password element not found");
 
-    //    }
-    //    By btnLogin = By.CssSelector("#user9Name > p:nth-child(3) > input[type=submit]");
-    //    var btn_login = driver.FindElement(btnLogin);
-    //    if (btn_login != null)
-    //    {
-    //        Console.WriteLine("the login button exist");
-    //        btn_login.Click();
-    //    }
-    //    else
-    //    {
-    //        Console.WriteLine("login button element not found");
-
-    //    }
-    //    By formTitle = By.CssSelector("#details > h2");
-    //    var form_title = driver.FindElement(formTitle);
-    //    if (form_title != null)
-    //    {
-    //        Console.WriteLine("the form title button exist");
-
-    //    }
-    //    else
-    //    {
-    //        Console.WriteLine("form title element not found");
-
-    //    }
-    //    Console.WriteLine("test is finished");
-    //}
-
-    //[TestMethod]
-    //public void test2()
-    //{
-    //    Console.WriteLine("Login test started");
-
-    //    //var username = driver.FindElement(userName);
-    //    sendKeys("#userName > p:nth-child(1) > input[type=text]", "helloworld");
-    //    sendKeys("#userName > p:nth-child(2) > input[type=text]", "helloworld");
-    //    clickElement("#userName > p:nth-child(3) > input[type=submit]");
-
-    //    By formTitle = By.CssSelector("#details > h2");
-
-    //    var form_title = driver.FindElement(formTitle);
-    //    if (form_title != null)
-    //    {
-    //        Console.WriteLine("The form title element exist");
-
-    //    }
-    //    else
-    //    {
-    //        Console.WriteLine("Form title element not found");
-
-    //    }
-    //    Console.WriteLine("Test is finished");
-    //}
+        Console.WriteLine("Test is finished");
+    }
 
     public static IWebElement clickElement(string selector)
     {
@@ -124,15 +76,15 @@ public class UnitTest1
         var element = driver.FindElement(elementSelector);
         if (element != null)
         {
-            Console.WriteLine("element exist");
+            
             element.Click();
+            Console.WriteLine("Element was clicked");
             return element;
         }
         else
         {
             Console.WriteLine("element not found");
             throw new InvalidOperationException("element is not exist");
-
         }
     }
 
@@ -159,8 +111,14 @@ public class UnitTest1
     [ClassInitialize]
     public static void ClassInitialize(TestContext testContext)
     {
-        driver = new ChromeDriver();
-        if(driver != null) {
+        ChromeOptions options = new ChromeOptions();      
+        options.AddArgument("no-sandbox");
+
+        driver = new ChromeDriver(ChromeDriverService.CreateDefaultService(), options, TimeSpan.FromMinutes(3));
+        driver.Manage().Timeouts().PageLoad.Add(System.TimeSpan.FromSeconds(30));
+
+
+        if (driver != null) {
             Console.WriteLine("WebDriver is not null");
 
         }

@@ -1,3 +1,6 @@
+/Users/viradethxay-ananh/Projects/testProjectLogin/testProjectLogin/bin/Debug/net7.0/selenium-manager/linux/selenium-manager
+/Users/viradethxay-ananh/Projects/testProjectLogin/testProjectLogin/bin/Debug/net7.0/selenium-manager/macos/selenium-manager
+/Users/viradethxay-ananh/Projects/testProjectLogin/testProjectLogin/bin/Debug/net7.0/selenium-manager/windows/selenium-manager.exe
 /Users/viradethxay-ananh/Projects/testProjectLogin/testProjectLogin/bin/Debug/net7.0/Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
 /Users/viradethxay-ananh/Projects/testProjectLogin/testProjectLogin/bin/Debug/net7.0/Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
 /Users/viradethxay-ananh/Projects/testProjectLogin/testProjectLogin/bin/Debug/net7.0/Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
@@ -18,6 +21,8 @@
 /Users/viradethxay-ananh/Projects/testProjectLogin/testProjectLogin/bin/Debug/net7.0/Microsoft.VisualStudio.TestPlatform.TestFramework.dll
 /Users/viradethxay-ananh/Projects/testProjectLogin/testProjectLogin/bin/Debug/net7.0/Newtonsoft.Json.dll
 /Users/viradethxay-ananh/Projects/testProjectLogin/testProjectLogin/bin/Debug/net7.0/NuGet.Frameworks.dll
+/Users/viradethxay-ananh/Projects/testProjectLogin/testProjectLogin/bin/Debug/net7.0/WebDriver.Support.dll
+/Users/viradethxay-ananh/Projects/testProjectLogin/testProjectLogin/bin/Debug/net7.0/WebDriver.dll
 /Users/viradethxay-ananh/Projects/testProjectLogin/testProjectLogin/bin/Debug/net7.0/cs/Microsoft.TestPlatform.CoreUtilities.resources.dll
 /Users/viradethxay-ananh/Projects/testProjectLogin/testProjectLogin/bin/Debug/net7.0/cs/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
 /Users/viradethxay-ananh/Projects/testProjectLogin/testProjectLogin/bin/Debug/net7.0/de/Microsoft.TestPlatform.CoreUtilities.resources.dll
@@ -96,8 +101,3 @@
 /Users/viradethxay-ananh/Projects/testProjectLogin/testProjectLogin/obj/Debug/net7.0/testProjectLogin.pdb
 /Users/viradethxay-ananh/Projects/testProjectLogin/testProjectLogin/obj/Debug/net7.0/testProjectLogin.genruntimeconfig.cache
 /Users/viradethxay-ananh/Projects/testProjectLogin/testProjectLogin/obj/Debug/net7.0/ref/testProjectLogin.dll
-/Users/viradethxay-ananh/Projects/testProjectLogin/testProjectLogin/bin/Debug/net7.0/selenium-manager/linux/selenium-manager
-/Users/viradethxay-ananh/Projects/testProjectLogin/testProjectLogin/bin/Debug/net7.0/selenium-manager/macos/selenium-manager
-/Users/viradethxay-ananh/Projects/testProjectLogin/testProjectLogin/bin/Debug/net7.0/selenium-manager/windows/selenium-manager.exe
-/Users/viradethxay-ananh/Projects/testProjectLogin/testProjectLogin/bin/Debug/net7.0/WebDriver.Support.dll
-/Users/viradethxay-ananh/Projects/testProjectLogin/testProjectLogin/bin/Debug/net7.0/WebDriver.dll
