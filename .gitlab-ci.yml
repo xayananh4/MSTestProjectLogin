@@ -1,1 +1,12 @@
-﻿
+﻿stages:
+- test
+
+test:
+  stage: test
+  image: mcr.microsoft.com/dotnet/sdk:7.0.100
+  script:
+  - dotnet restore
+  - dotnet test --verbosity normal
+  artifacts:
+    paths:
+    - TestResults/
