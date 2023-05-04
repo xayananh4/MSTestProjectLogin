@@ -55,6 +55,11 @@ public class UnitTest1
         string desktopPath = "/Users/viradethxay-ananh/Desktop/screenshot.png";
         driver.FindElement(By.Name("photo")).SendKeys(desktopPath);
 
+        // choose flavor of selenium
+        clickElement("#mainContent > div:nth-child(7) > div > form > table > tbody > tr:nth-child(8) > td:nth-child(2) > span:nth-child(1) > input[type=checkbox]");
+
+
+
         //create an instance of action class and pass in the driver
         Actions actions = new Actions(driver);
 
