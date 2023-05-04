@@ -66,13 +66,12 @@ public class UnitTest1
         //scroll down thee page using the action class
 
         actions.SendKeys(Keys.PageDown).Perform();
-        ////clicking on the submit button 
+
+        //clicking on the submit button 
         clickElement("#mainContent > div:nth-child(7) > div > form > table > tbody > tr:nth-child(11) > td:nth-child(2) > button");
 
 
-
-
-        Console.WriteLine("Test is finished");
+        Console.WriteLine("Test is finally finished");
     }
 
     public static IWebElement clickElement(string selector)
