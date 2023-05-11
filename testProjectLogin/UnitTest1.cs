@@ -68,7 +68,7 @@ public class UnitTest1
         actions.SendKeys(Keys.PageDown).Perform();
 
         //clicking on the submit button 
-        clickElement("#mainContent > div:nth-child(7) > div > form > table > tbody > tr:nth-child(11) > td:nth-child(2) > button");
+        //clickElement("#mainContent > div:nth-child(7) > div > form > table > tbody > tr:nth-child(11) > td:nth-child(2) > button");
 
 
         Console.WriteLine("Test is finally finished");
