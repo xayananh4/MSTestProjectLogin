@@ -1,5 +1,5 @@
-﻿stages:
-- test
+#stages:
+#- test
 
 test:
   stage: test
