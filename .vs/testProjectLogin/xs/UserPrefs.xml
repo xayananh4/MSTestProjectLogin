@@ -1,16 +1,29 @@
 ﻿<Properties StartupConfiguration="{DA07ACB6-B852-4A69-A48B-A40A1975A805}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="testProjectLogin/UnitTest1.cs">
     <Files>
-      <File FileName=".gitlab-ci.yml" />
-      <File FileName="testProjectLogin/UnitTest1.cs" Line="66" Column="55" />
+      <File FileName=".gitlab-ci.yml" Line="1" Column="2" />
+      <File FileName="testProjectLogin/UnitTest1.cs" Line="33" Column="35" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="testProjectLogin" expanded="True">
             <Node name="testProjectLogin" expanded="True">
-              <Node name="Dependencies" expanded="True" />
-              <Node name="UnitTest1.cs" selected="True" />
+              <Node name="Dependencies" expanded="True">
+                <Node name="FrameworkReferences" expanded="True" />
+                <Node name="PackageDependencies" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="testProjectLogin" expanded="True">
+            <Node name="testProjectLogin" expanded="True">
+              <Node name="testProjectLogin" expanded="True">
+                <Node name="UnitTest1" expanded="True" />
+              </Node>
             </Node>
           </Node>
         </State>

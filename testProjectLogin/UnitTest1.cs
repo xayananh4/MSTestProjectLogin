@@ -3,6 +3,7 @@ using System.Runtime.Intrinsics.X86;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Interactions;
+using OpenQA.Selenium.Support.UI;
 
 namespace testProjectLogin;
 
@@ -57,6 +58,16 @@ public class UnitTest1
 
         // choose flavor of selenium
         clickElement("#mainContent > div:nth-child(7) > div > form > table > tbody > tr:nth-child(8) > td:nth-child(2) > span:nth-child(1) > input[type=checkbox]");
+
+        string conOptions = "Europe";
+        //SelectElement dropDown = new SelectElement(driver.FindElement(By.XPath("#mainContent > "))).SelectByText("Antartica");
+        //new Select(driver.findElement(By.xpath("//selection box"))).selectByValue("");
+        //dropDown.SelectByValue(conOptions);
+
+  
+      
+        SelectElement dropDown = new SelectElement(driver.FindElement(By.Name("continents")));
+        dropDown.SelectByText("Antartica");
 
 
 
