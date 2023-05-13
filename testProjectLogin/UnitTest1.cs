@@ -59,28 +59,17 @@ public class UnitTest1
         // choose flavor of selenium
         clickElement("#mainContent > div:nth-child(7) > div > form > table > tbody > tr:nth-child(8) > td:nth-child(2) > span:nth-child(1) > input[type=checkbox]");
 
-        string conOptions = "Europe";
-        //SelectElement dropDown = new SelectElement(driver.FindElement(By.XPath("#mainContent > "))).SelectByText("Antartica");
-        //new Select(driver.findElement(By.xpath("//selection box"))).selectByValue("");
-        //dropDown.SelectByValue(conOptions);
+       //select a continent    
+        SelectElement dropDownCon = new SelectElement(driver.FindElement(By.Name("continents")));
+        dropDownCon.SelectByText("Antartica");
 
-  
-      
-        SelectElement dropDown = new SelectElement(driver.FindElement(By.Name("continents")));
-        dropDown.SelectByText("Antartica");
+        SelectElement dropDownCommands = new SelectElement(driver.FindElement(By.Name("selenium_commands")));
+        dropDownCommands.SelectByText("WebElement Commands");
 
-
-
-        //create an instance of action class and pass in the driver
+        //clicking on the Button 
+        WebElement element = (WebElement)driver.FindElement(By.CssSelector("#mainContent > div:nth-child(7) > div > form > table > tbody > tr:nth-child(11) > td:nth-child(2) > button"));
         Actions actions = new Actions(driver);
-
-        //scroll down thee page using the action class
-
-        actions.SendKeys(Keys.PageDown).Perform();
-
-        //clicking on the submit button 
-        //clickElement("#mainContent > div:nth-child(7) > div > form > table > tbody > tr:nth-child(11) > td:nth-child(2) > button");
-
+        actions.MoveToElement(element).Click().Build().Perform();
 
         Console.WriteLine("Test is finally finished");
     }
