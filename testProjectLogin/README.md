@@ -13,24 +13,25 @@
 * 09:51: researching xpath parent
 * 12:04: researching xpath parent
 
-# Local-Business-Inventory-Tracker
+# Capstone Selenium C#
 Names of contributors: By Viradeth Xay-ananh.  
-React application that tracks inventory of coffee
+Web automation script using c# and selenium framework
 
 # Description 
-React application that allow user to see a list of coffee beans.  Sell one pound of listed coffee bean and add a new burlap sack of coffee to the inventory.
+Web automation script that goes to website and fills out all the necessary  items in a form.
 
 ## Technologies Used
-* React
-* javascript
+* MSTest
+* C#
 * Markup
-* Git
-* HTML
+* Github, Gitlab
+* C#
+* visual studio 2022
 
 # Complete setup/Installation instructions:
 * Clone repository to your desktop 
-* CD to directory: coffee 
-* Enter in command: 'npm start'
+* CD to directory: testProjectLogin
+* Open file: UnitTest1.cs, 
 
 # Known bugs: 
 No bugs 
